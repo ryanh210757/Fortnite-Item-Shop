@@ -2,14 +2,25 @@ fetch("https://fortnite-api.com/v2/shop/br")
     .then(res => res.json())
     .then(data => {
     
-       // const {data: {featured: {entries: [item1, item2]}}, status} = data
+        const sectionName = []
         const {data: {specialFeatured: {entries}}} = data
         const skinNamesArray = entries.map(item => {
-            return item.items
+            return item.section
          }) 
         console.log(skinNamesArray)
-        skinNamesArray.forEach(secondArray => {secondArray.forEach (item => console.log(item.name))})
-       
 
+        skinNamesArray.map(item => {
+            if(!sectionName.includes(item.name)){
+                sectionName.push(item.name)
+            }
+        })
         
+        for(let i=0;i<sectionName.length;i++){
+            document.getElementById("div").innerHTML += 
+                `
+                <h2>${sectionName[i]}</h2>
+                `
+        }
+
+        console.log(sectionName)
     })
