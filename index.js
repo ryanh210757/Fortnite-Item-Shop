@@ -4,18 +4,23 @@ fetch("https://fortnite-api.com/v2/shop/br")
     
         const sectionName = []
         const {data: {specialFeatured: {entries}}} = data
-        const skinNamesArray = entries.map(item => {
-            return item.section
+        const entryArray = entries.map(item => {
+            return item
          }) 
-        console.log(skinNamesArray)
+        console.log(entryArray)
 
-        skinNamesArray.map(item => {
-            if(!sectionName.includes(item.name)){
-                sectionName.push(item.name)
+        entryArray.forEach(item => {
+            if(!sectionName.includes(item.section.name)){
+                sectionName.push(item.section.name)
+               // sectionName.push(item.newDisplayAsset.materialInstances[0].images.OfferImage)
             }
+
+            
         })
         
         for(let i=0;i<sectionName.length;i++){
+            if(sectionName[i] === entryArray)
+            allItems = entryArray.filter(item => item.section.Name === sectionName[i])
             document.getElementById("div").innerHTML += 
                 `
                 <h2>${sectionName[i]}</h2>
@@ -23,4 +28,6 @@ fetch("https://fortnite-api.com/v2/shop/br")
         }
 
         console.log(sectionName)
+
     })
+
