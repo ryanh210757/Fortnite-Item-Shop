@@ -14,20 +14,21 @@ fetch("https://fortnite-api.com/v2/shop/br")
                 sectionName.push(item.section.name)
                // sectionName.push(item.newDisplayAsset.materialInstances[0].images.OfferImage)
             }
-
+            entryArray.filter(item => item.section.name === sectionName)
             
         })
         
         for(let i=0;i<sectionName.length;i++){
-            if(sectionName[i] === entryArray)
-            allItems = entryArray.filter(item => item.section.Name === sectionName[i])
+            
+            console.log(entryArray.filter(item => item.section.name === sectionName[i]))
             document.getElementById("div").innerHTML += 
                 `
                 <h2>${sectionName[i]}</h2>
+                
                 `
         }
 
         console.log(sectionName)
-
+      
     })
 
