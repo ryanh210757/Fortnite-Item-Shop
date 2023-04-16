@@ -31,6 +31,7 @@ fetch("https://fortnite-api.com/v2/shop/br")
                         document.getElementById("div").innerHTML += 
                         `
                         <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
+                        <p>${item.regularPrice}</p>
                         `
                     }
                 })
