@@ -6,3 +6,8 @@ img{
     width: 228px;
     height: 228px;
 }
+
+.container{
+    display: inline-block;
+    border: 1px solid red;
+}
