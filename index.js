@@ -29,7 +29,27 @@ fetch("https://fortnite-api.com/v2/shop/br")
                     if(item.section.name === sectionName[i]){
                         console.log(item)
                         let style
-                        
+                        switch(item.items[0].rarity.value){
+                            case "uncommon":
+                                document.getElementById("div").style.border = '3px solid #88e339'
+                                break;
+                            case "rare":
+                                style
+                                break;
+                            case "epic":
+                                style
+                                break;
+                            case "legendary":
+                                style
+                                break;
+                            case "icon":
+                                document.getElementById("div").style.border = '3px solid #88e339'
+                                document.getElementById("div").style.background = '3px solid #52e0e0'
+                                break;
+                            case "Gaming Legends Series":
+                                style
+                                break;
+                        }
                         document.getElementById("div").innerHTML += 
                         `
                         <div class="container"">
