@@ -16,3 +16,33 @@ img{
     display: inline-block;
     border: 1px solid red;
 }
+
+.rarity-gaming_legends{
+    background: radial-gradient(#5447d4,#312497);
+    border: 3px solid #8078ff;
+}
+
+.rarity-icon_series{
+    background: radial-gradient(#36b7b7,#256b6b);
+    border: 3px solid #52e0e0;
+}
+
+.rarity-uncommon{
+    background: radial-gradient(#6abb1e,#175117);
+    border: 3px solid #88e339;
+}
+
+.rarity-rare{
+    background: radial-gradient(#2cc0ff,#143877);
+    border: 3px solid #37d0ff;
+}
+
+.rarity-epic{
+    background: radial-gradient(#c359ff,#4c2483);
+    border: 3px solid #ea5eff;
+}
+
+.rarity-legendary{
+    background: radial-gradient(#ea8d23,#78371d);
+    border: 3px solid #e98d4b;
+}
