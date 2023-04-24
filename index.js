@@ -28,6 +28,8 @@ fetch("https://fortnite-api.com/v2/shop/br")
                 {
                     if(item.section.name === sectionName[i]){
                         console.log(item)
+                        let style
+                        
                         document.getElementById("div").innerHTML += 
                         `
                         <div class="container"">
