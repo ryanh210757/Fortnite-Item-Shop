@@ -14,7 +14,8 @@ img{
 
 .container{
     display: inline-block;
-    border: 1px solid red;
+    width: 290px;
+    height: 290px;
 }
 
 .rarity-gaming_legends{
