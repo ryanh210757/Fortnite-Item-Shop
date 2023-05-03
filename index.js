@@ -29,7 +29,7 @@ fetch("https://fortnite-api.com/v2/shop/br")
                         case "uncommon":
                             document.getElementById("div").innerHTML += 
                             `
-                                <div id="square" class="rarity-uncommon">
+                                <div id="square" class="container rarity-uncommon">
                                 <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
                                 <p>${item.regularPrice}</p>
                                 <p>${item.items[0].name}</p>
@@ -76,6 +76,18 @@ fetch("https://fortnite-api.com/v2/shop/br")
                                 </div>
                             `
                                 break;
+                        case "starwars":
+                            document.getElementById("div").innerHTML += 
+                            `
+                                <div id="square" class="container starwars">
+                                <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
+                                <div class="itemInfo">
+                                    <p>${item.regularPrice}</p>
+                                    <p>${item.items[0].name}</p>
+                                </div>
+                                </div>
+                            `
+                                break;
                         case "Gaming Legends Series":
                             document.getElementById("div").innerHTML += 
                             `
@@ -85,7 +97,7 @@ fetch("https://fortnite-api.com/v2/shop/br")
                                 <p>${item.items[0].name}</p>
                                 </div>
                             `
-                                break;
+                            break;
                         }
                     }
                 })
