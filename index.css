@@ -9,16 +9,17 @@ img{
 }
 
 .container{
-    display: flex;
     cursor: pointer;
-    flex-direction: column;
-    width: 240px;
-    
+    width: 240px;    
 }
 
 .itemInfo{
     background: rgba(0,0,0,.3);
     text-align: center;
+    border: 1px solid green;
+}
+p{
+    margin: 0;
 }
 
 .rarity-gaming_legends{
@@ -54,4 +55,5 @@ img{
 .starwars{
     background: radial-gradient(#1b366e,#081737);
     border: 3px solid #e7c413;
+    
 }

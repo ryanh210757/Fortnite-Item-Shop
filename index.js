@@ -3,7 +3,7 @@ fetch("https://fortnite-api.com/v2/shop/br")
     .then(data => {
     
         const sectionName = []
-        const {data: {specialFeatured: {entries}}} = data
+        const {data: {specialFeatured: {entries}}} = data //object destructuring
         const entryArray = entries.map(item => {
             return item
          }) 
@@ -24,8 +24,8 @@ fetch("https://fortnite-api.com/v2/shop/br")
                 {
                     if(item.section.name === sectionName[i]){
                         console.log(item)
-                        let rare = item.items[0].rarity.value
-                    switch(rare){
+                        let rarity = item.items[0].rarity.value
+                    switch(rarity){
                         case "uncommon":
                             document.getElementById("div").innerHTML += 
                             `
@@ -82,8 +82,9 @@ fetch("https://fortnite-api.com/v2/shop/br")
                                 <div id="square" class="container starwars">
                                 <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
                                 <div class="itemInfo">
-                                    <p>${item.regularPrice}</p>
+                                    
                                     <p>${item.items[0].name}</p>
+                                    <p>${item.regularPrice}</p>
                                 </div>
                                 </div>
                             `
