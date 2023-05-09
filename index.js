@@ -4,6 +4,7 @@ fetch("https://fortnite-api.com/v2/shop/br")
     
         const sectionName = []
         const {data: {specialFeatured: {entries}}} = data //object destructuring
+        const vBuckIcon = data.data.vbuckIcon
         const entryArray = entries.map(item => {
             return item
          }) 
@@ -82,9 +83,11 @@ fetch("https://fortnite-api.com/v2/shop/br")
                                 <div id="square" class="container starwars">
                                 <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
                                 <div class="itemInfo">
-                                    
-                                    <p>${item.items[0].name}</p>
+                                    <h4>${item.items[0].name}</h4>
+                                    <div class="itemBox">
+                                    <img class="vbuck" src="${vBuckIcon}"/>
                                     <p>${item.regularPrice}</p>
+                                    </div>
                                 </div>
                                 </div>
                             `

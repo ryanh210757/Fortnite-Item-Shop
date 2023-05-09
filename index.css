@@ -3,23 +3,41 @@ body{
     color: white;
     font-family: 'Luckiest Guy';
 }
-
 img{
     max-width: 100%;
 }
+p{
+    margin: 0;
+}
+
+h4{
+    font-size: 21px;
+    margin: 5px 0;
+}
+.vbuck{
+    width: 20px;
+    height: 20px;
+}
+.itemBox{
+    display: flex;
+    justify-content: center;
+}
 
 .container{
+    display: flex;
     cursor: pointer;
-    width: 240px;    
+    flex-direction: column;
+    width: 240px;
+    position: relative;
+    
 }
 
 .itemInfo{
     background: rgba(0,0,0,.3);
     text-align: center;
-    border: 1px solid green;
-}
-p{
-    margin: 0;
+    position: absolute;
+    top: 189px;
+    width: 240px;
 }
 
 .rarity-gaming_legends{
@@ -55,5 +73,4 @@ p{
 .starwars{
     background: radial-gradient(#1b366e,#081737);
     border: 3px solid #e7c413;
-    
 }
