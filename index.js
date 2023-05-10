@@ -18,7 +18,7 @@ fetch("https://fortnite-api.com/v2/shop/br")
         })
         
         for(let i=0;i<sectionName.length;i++){
-            document.getElementById("div").innerHTML += 
+            document.getElementById("mainDiv").innerHTML += 
                 `<h2>${sectionName[i]}</h2>`
 
             entryArray.filter(item => 
@@ -28,7 +28,7 @@ fetch("https://fortnite-api.com/v2/shop/br")
                         let rarity = item.items[0].rarity.value
                     switch(rarity){
                         case "uncommon":
-                            document.getElementById("div").innerHTML += 
+                            document.getElementById("mainDiv").innerHTML += 
                             `
                                 <div id="square" class="container rarity-uncommon">
                                 <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
@@ -38,7 +38,7 @@ fetch("https://fortnite-api.com/v2/shop/br")
                             `
                                 break;
                         case "rare":
-                            document.getElementById("div").innerHTML += 
+                            document.getElementById("mainDiv").innerHTML += 
                             `
                                 <div id="square" class="container rarity-rare">
                                 <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
@@ -48,7 +48,7 @@ fetch("https://fortnite-api.com/v2/shop/br")
                             `
                                 break;
                         case "epic":
-                            document.getElementById("div").innerHTML += 
+                            document.getElementById("mainDiv").innerHTML += 
                             `
                                 <div id="square" class="container rarity-epic">
                                 <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
@@ -58,7 +58,7 @@ fetch("https://fortnite-api.com/v2/shop/br")
                             `
                                 break;
                         case "legendary":
-                            document.getElementById("div").innerHTML += 
+                            document.getElementById("mainDiv").innerHTML += 
                             `
                                 <div id="square" class="container rarity-legendary">
                                 <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
@@ -68,7 +68,7 @@ fetch("https://fortnite-api.com/v2/shop/br")
                             `
                                 break;
                         case "icon":
-                            document.getElementById("div").innerHTML += 
+                            document.getElementById("mainDiv").innerHTML += 
                             `
                                 <div id="square" class="container rarity-icon_series">
                                 <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
@@ -78,22 +78,23 @@ fetch("https://fortnite-api.com/v2/shop/br")
                             `
                                 break;
                         case "starwars":
-                            document.getElementById("div").innerHTML += 
+                            document.getElementById("mainDiv").innerHTML += 
                             `
                                 <div id="square" class="container starwars">
-                                <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
+                                    <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
                                 <div class="itemInfo">
                                     <h4>${item.items[0].name}</h4>
-                                    <div class="itemBox">
+                                <div class="itemBox">
                                     <img class="vbuck" src="${vBuckIcon}"/>
                                     <p>${item.regularPrice}</p>
-                                    </div>
+                                </div>
                                 </div>
                                 </div>
                             `
+
                                 break;
                         case "Gaming Legends Series":
-                            document.getElementById("div").innerHTML += 
+                            document.getElementById("mainDiv").innerHTML += 
                             `
                                 <div id="square" class="container rarity-gaming_legends">
                                 <img src="${item.newDisplayAsset.materialInstances[0].images.OfferImage}" />
