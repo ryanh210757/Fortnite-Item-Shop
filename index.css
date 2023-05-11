@@ -17,6 +17,7 @@ h3{
 h4{
     font-size: 22px;
     margin: 8px 0 5px 0;
+ 
 }
 .vbuck{
     width: 20px;
@@ -38,8 +39,10 @@ h4{
     cursor: pointer;
     width: 240px;
     position: relative;
-    margin: 10px 5px;
+    margin: 5px 2px;
     display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .itemInfo{
@@ -49,6 +52,10 @@ h4{
     top: 178px;
     width: 240px;
     height:65px;
+}
+
+.itemInfo h4{
+    border:1px solid green;
 }
 
 .rarity-gaming_legends{

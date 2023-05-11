@@ -109,4 +109,7 @@ fetch("https://fortnite-api.com/v2/shop/br")
         }
         console.log(sectionName)
       })
-
+        
+      document.getElementById("mainDiv").addEventListener("click", function(e){
+                console.log(e.target)
+        })
