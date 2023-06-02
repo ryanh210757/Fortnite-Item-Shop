@@ -63,7 +63,7 @@ h4{
     border: 3px solid #8078ff;
 }
 
-.rarity-icon_series{
+.icon{
     background: radial-gradient(#36b7b7,#256b6b);
     border: 3px solid #52e0e0;
 }
@@ -92,3 +92,7 @@ h4{
     background: radial-gradient(#1b366e,#081737);
     border: 3px solid #e7c413;
   }
+.marvel{
+    background: radial-gradient(#c53333,#761b1b);
+    border: 3px solid #ef3537;
+}
