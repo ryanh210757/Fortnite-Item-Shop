@@ -10,6 +10,10 @@ img{
 p{
     margin: 0;
 }
+
+h2{
+    margin: 30px 0px 10px 0px;
+}
 h3{
     text-align: center;
     font-size: 30px;
@@ -31,7 +35,6 @@ h4{
 }
 
 #mainDiv{
-    border: 1px solid red;
     text-align: center;
     
 }
@@ -54,11 +57,18 @@ h4{
     height:65px;
 }
 
-.itemInfo h4{
-    border:1px solid green;
+#name{
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 10s linear infinite;
 }
 
-.rarity-gaming_legends{
+.rarity-gaming_legends,
+.gaminglegends{
     background: radial-gradient(#5447d4,#312497);
     border: 3px solid #8078ff;
 }
@@ -68,22 +78,22 @@ h4{
     border: 3px solid #52e0e0;
 }
 
-.rarity-uncommon{
+.uncommon{
     background: radial-gradient(#6abb1e,#175117);
     border: 3px solid #88e339;
 }
 
-.rarity-rare{
+.rare{
     background: radial-gradient(#2cc0ff,#143877);
     border: 3px solid #37d0ff;
 }
 
-.rarity-epic{
+.epic{
     background: radial-gradient(#c359ff,#4c2483);
     border: 3px solid #ea5eff;
 }
 
-.rarity-legendary{
+.legendary{
     background: radial-gradient(#ea8d23,#78371d);
     border: 3px solid #e98d4b;
 }
@@ -96,3 +106,25 @@ h4{
     background: radial-gradient(#c53333,#761b1b);
     border: 3px solid #ef3537;
 }
+.dc{
+    background: radial-gradient(#5475c7,#243461);
+    border: 3px solid #6094ce;
+}
+
+@-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }  
